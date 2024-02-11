@@ -15,8 +15,8 @@ use App\Livewire\SetNickname;
 |
 */
 
-Route::get('/chat/{channel}', Chat::class)->middleware('NicknameMiddleware')->name('channel');
-Route::get('/chat', SetNickname::class)->name('start');
+Route::get('/channel/{channel}', Chat::class)->middleware('NicknameMiddleware')->name('channel');
+Route::get('/nickname', SetNickname::class)->name('start');
 
 Route::get('/', function(){
     return abort(404);

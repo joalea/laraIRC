@@ -16,6 +16,6 @@ class SetNickname extends Component
 
     public function save() {
         session(['nickname' => $this->nickname]);
-        return redirect(session('requestedChannelPath', '/chat/enterchannelnamehere'));
+        return redirect(session('requestedChannelPath', '/channel/enterchannelnamehere'));
     }
 }
