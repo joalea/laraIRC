@@ -16,12 +16,9 @@ class ChatInput extends Component
     }
 
     public function postMessage() {
-        if(str_starts_with($this->message, '/')) {
-            $this->message = 'slapped';
-        }
         
         Chathistory::create([
-            'nickname' => session('nickname', 'balle'),
+            'nickname' => session('nickname', 'padawan'),
             'message' => $this->message,
             'channel' => $this->channel,
         ]);
